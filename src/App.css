@@ -1,38 +1,86 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+  --gold: #daa520;
+  --gray: #f5f5dc;
+}
+
+.App{
+  position: absolute;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+
+.top-bar{
   text-align: center;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-bar > .header {
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-bar > .categories {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.categories > div{
+  text-transform: uppercase;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active{
+  background-color: var(--gold);
+  color: var(--gray);
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-item{
+  width:600px;
+  margin:10px;
+  display:flex;
+}
+
+ img{
+  padding: 0;
+  width: 250px;
+  height: 150px;
+  position: center;
+  background-color: var(--gold);
+  border: var(--gold) solid 3px;
+  border-radius: 5px;
+  margin: 10px;
+  object-fit: cover;
+}
+
+
+.title{
+  display: flex;
+  border-bottom: grey solid 3px;
+}
+
+h3,h4{
+  font-weight: 100;
+}
+
+h3 {
+  padding-right: 10px;
+}
+h4 {
+  padding:3px;
+  background-color: var(--gold);
+  color:#f5f5dc;
+  border-radius: 10px;
+  padding-left: 10px;
 }
